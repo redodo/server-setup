@@ -1,0 +1,18 @@
+# List of packages to install on a fresh system.
+# File is saved as .yaml to have highlighting for comments.
+
+# Required for server setup
+curl
+jq
+
+# Required for Docker installation
+apt-transport-https
+ca-certificates
+gnupg
+lsb-release
+
+# Nice to have packages
+git
+sudo
+vim
+zsh

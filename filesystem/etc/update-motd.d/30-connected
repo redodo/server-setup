@@ -1,0 +1,3 @@
+#!/bin/bash
+location=$(hostnamectl | grep Location | sed -e 's/ *Location: //')
+echo -e "\n\e[1;30mYou are connected to \e[1;37m$(hostname)\e[1;30m [$location]\e[0m"

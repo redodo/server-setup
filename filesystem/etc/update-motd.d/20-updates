@@ -1,0 +1,10 @@
+#!/bin/bash
+UPDATES=$(apt-get dist-upgrade -s --quiet=2 | grep ^Inst | wc -l)
+
+if [ $UPDATES -eq "0" ]; then
+    echo -e "\033[0;36mThe system is up-to-date.\033[0m"
+else
+    PACKAGES=$(apt list --upgradeable | tail -n +2)
+    echo -e "\nThere are \033[0;32m$UPDATES updates\033[0m to be installed:"
+    echo -e "\033[0;33m$PACKAGES\033[0m"
+fi
